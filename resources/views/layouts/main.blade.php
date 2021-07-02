@@ -8,8 +8,8 @@
 	<navbar>
 		<ul>
 			<li><a href="/">VerdurApp</a></li>
-			<li>Productores</li>
-			<li>Acerca del proyecto</li>
+			<li><a href="/productores">Productores</li>
+			<li><a href="/acercade">Acerca del proyecto</li>
 		</ul>
 		<ul>
 			<li><a href="/login">Log In</a></li>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductosConUnProductorTable extends Migration
+class CreateProductoDeUnProductorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateProductosConUnProductorTable extends Migration
      */
     public function up()
     {
-        Schema::create('productos_con_un_productor', function (Blueprint $table) {
+        Schema::create('producto_de_un_productors', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->foreignId('producto_id')->constrained('productos');
             $table->foreignId('productor_id')->constrained('productores');
-            
         });
     }
 
@@ -29,6 +28,6 @@ class CreateProductosConUnProductorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('productos_con_un_productor');
+        Schema::dropIfExists('producto_de_un_productors');
     }
 }

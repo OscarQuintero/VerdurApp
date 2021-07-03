@@ -4,7 +4,15 @@
 
 	<section>
 		<article>
-			Nombre del productor
+			<ul>
+				<li>r</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>				
+			</ul>
+			
 			<br>
 			imagen
 			<br> 

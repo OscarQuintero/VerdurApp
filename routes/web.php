@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ProductorController;
+use App\Http\Controllers\TipoDeProducto;
+use App\Http\Controllers\ProductoDeUnProductor;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +23,7 @@ use App\Http\Controllers\MainController;
 // });
 
 Route::get('/', [MainController::class, 'mostrarCatalogo']);
-Route::get('/productores', [MainController::class, 'mostrarProductores']);
+
 Route::get('/acercade', [MainController::class, 'mostrarAcercaDe']);
 
 // Route::get('/login', [MainController::class, 'mostrarLogIn']);
@@ -28,3 +32,8 @@ Route::get('/acercade', [MainController::class, 'mostrarAcercaDe']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::resource('productos', ProductoController::class);
+Route::resource('productores', ProductorController::class);
+Route::resource('tipoderoducto', TipoDeProducto::class);
+Route::resource('productodeunproductor', PorductoDeUnProductor::class);

@@ -14,7 +14,7 @@ class ProductorController extends Controller
      */
     public function index()
     {
-        //
+        return view('listaproductores');
     }
 
     /**
@@ -24,7 +24,7 @@ class ProductorController extends Controller
      */
     public function create()
     {
-        //
+        return view('productorform');
     }
 
     /**
@@ -35,7 +35,7 @@ class ProductorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view('productorform');
     }
 
     /**

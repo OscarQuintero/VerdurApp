@@ -14,7 +14,7 @@ class TipoDeProductoController extends Controller
      */
     public function index()
     {
-        //
+        return view('listatiposdeproductos');
     }
 
     /**

@@ -2,7 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\TipoDeProducto;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class TipoDeProductoSeeder extends Seeder
 {
@@ -13,13 +17,10 @@ class TipoDeProductoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tipo_de_producto')->insert([
-           	'nombre' => Str::random(10),
-            'nombre' => FRUTA de Todo el año,
-			'nombre' => FRUTA de Temporada,
-			'nombre' => FRUTA de TemporadaVERDURA,
-			'nombre' => FRUTA de TemporadaLEGUMINOSA,
-			'nombre' => FRUTA de TemporadaCEREALES, 
-         ]);
+        DB::table('tipo_de_productos')->insert(['nombre' => 'FRUTA de Todo el año','ruta_de_imagen' => 'nd',]);
+        DB::table('tipo_de_productos')->insert(['nombre' => 'FRUTA de Temporada','ruta_de_imagen' => 'nd',]);
+		DB::table('tipo_de_productos')->insert(['nombre' => 'FRUTA de TemporadaVERDURA','ruta_de_imagen' => 'nd',]);
+		DB::table('tipo_de_productos')->insert(['nombre' => 'FRUTA de TemporadaLEGUMINOSA','ruta_de_imagen' => 'nd',]);
+		DB::table('tipo_de_productos')->insert(['nombre' => 'FRUTA de TemporadaCEREALES','ruta_de_imagen' => 'nd',]);
     }
 }

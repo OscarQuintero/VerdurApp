@@ -18,7 +18,7 @@ class CreateProductosTable extends Migration
             $table->timestamps();
             $table->string('nombre', 50);
             $table->string('ruta_de_imagen', 150);
-            $table->foreignId('tipo_de_producto_id')->constrained('tipo_de_producto');
+            $table->foreignId('tipo_de_producto_id')->constrained('tipo_de_productos');
         });
     }
 

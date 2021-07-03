@@ -17,7 +17,7 @@ class CreateProductoDeUnProductorsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('producto_id')->constrained('productos');
-            $table->foreignId('productor_id')->constrained('productores');
+            $table->foreignId('productor_id')->constrained('productors');
         });
     }
 

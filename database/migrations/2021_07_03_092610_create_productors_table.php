@@ -16,6 +16,12 @@ class CreateProductorsTable extends Migration
         Schema::create('productors', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('nombre', 50);
+            $table->string('ruta_de_imagen', 150);
+            $table->string('direccion', 200);
+            $table->string('ciudad', 50);
+            $table->string('cp', 5);
+            $table->string('telefono', 12);
         });
     }
 

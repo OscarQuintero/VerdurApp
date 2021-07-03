@@ -24,3 +24,7 @@ Route::get('/acercade', [MainController::class, 'mostrarAcercaDe']);
 
 Route::get('/login', [MainController::class, 'mostrarLogIn']);
 Route::get('/signup', [MainController::class, 'mostrarSignUp']);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

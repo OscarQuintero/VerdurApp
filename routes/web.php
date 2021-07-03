@@ -15,15 +15,15 @@ use App\Http\Controllers\MainController;
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('layouts.main');
 // });
 
 Route::get('/', [MainController::class, 'mostrarCatalogo']);
 Route::get('/productores', [MainController::class, 'mostrarProductores']);
 Route::get('/acercade', [MainController::class, 'mostrarAcercaDe']);
 
-Route::get('/login', [MainController::class, 'mostrarLogIn']);
-Route::get('/signup', [MainController::class, 'mostrarSignUp']);
+// Route::get('/login', [MainController::class, 'mostrarLogIn']);
+// Route::get('/signup', [MainController::class, 'mostrarSignUp']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

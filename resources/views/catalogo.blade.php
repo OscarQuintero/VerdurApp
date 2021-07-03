@@ -1,7 +1,17 @@
 @extends('layouts.main')
 @section('contenido') 
 	<ul>
-		<li>1</li>
-		<li>2</li>
+		<li>
+			<a href="">
+				<article>
+					Prducto 
+					<br>
+					Foto
+					<br>
+					Vendedor
+				</article>
+			</a>
+		</li>
+		
 	</ul>
 @endsection
